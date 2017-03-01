@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UnitTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Orderstable">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="Zip" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="CardExpirationMonth" Type="int" />
+    <Property Name="CardExpirationYear" Type="int" />
+    <Property Name="CardSecurityCode" Type="int" />
+    <Property Name="Price" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="100" />
+    <Property Name="ProductId" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="UnitTestModelStoreContainer">
+    <EntitySet Name="Orderstable" EntityType="Self.Orderstable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
